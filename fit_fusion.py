@@ -123,9 +123,13 @@ class FitFusion:
             name="diet and workout coach",
             description="Expert diet and workout planner.",
             instructions=[
-                "Use the retrieved knowledge base data and the user's details to craft a 7-day diet/workout plan.",
-                "Reference the knowledge base explicitly—don't guess or assume unverified info.",
-                "Ensure the final step yields a complete 7-day plan, including meal details and workouts.",
+                "You are tasked with creating a **step-by-step plan** to develop a **7-day diet and workout routine** using the retrieved data from the knowledge base and the user's provided information. ",
+                "Use the user’s personal details (age, gender, height, weight, goals, dietary preferences, workout preferences, etc.) to ensure the plan is well-tailored. ",
+                "Your plan should include daily meals (breakfast, lunch, dinner, snacks) and a corresponding workout schedule for each day, accounting for rest days as necessary. ",
+                "In each step, reference the relevant knowledge or insights from the knowledge base—do not assume information that isn’t verified or retrieved. ",
+                "Ensure your final step provides a **complete 7-day plan**, incorporating meal details, macro guidelines, workout details, and any additional health/wellness considerations. ",
+                "Do not add superfluous steps—only steps that contribute to creating and presenting the plan. ",
+                "The result of the **final step** is your final answer."
             ],
             knowledge=knowledge_base,
             search_knowledge=True,
@@ -149,11 +153,12 @@ class FitFusion:
             name="Diet and Workout Planner Team",
             team=[diet_agent, web_searcher],
             instructions=[
-                "Retrieve relevant info from the knowledge base first.",
-                "If more data is needed, request the Web Searcher to fetch it.",
-                "Finally, synthesize the data into a 7-day plan tailored to the user."
+                "First, retrieve any relevant information from the knowledge base that addresses the user's query or domain of interest.",
+                "Then, ask the article reader to review the retrieved documents for detailed insights. Provide direct references or links to the content so it can be examined.",
+                "Next, if additional information is needed, request the web searcher to gather supplementary data from external sources. Provide those links to the article reader as well, ensuring thorough research.",
+                "Finally, synthesize all the gathered information into a clear, step-by-step 7-day diet and workout plan tailored to the user's details and goals."
             ],
-            show_tool_calls=True,
+        show_tool_calls=True,
             markdown=True,
             read_chat_history=True,
             memory=AgentMemory(
