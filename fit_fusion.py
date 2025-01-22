@@ -1,23 +1,8 @@
 import os
 
-# Configure SOCKS5 Proxy
-# os.environ["HTTP_PROXY"] = "socks5://127.0.0.1:8087"
-# os.environ["HTTPS_PROXY"] = "socks5://127.0.0.1:8087"
-
-# Environment variables for API keys
-os.environ[
-    "OPENAI_API_KEY"] = "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"
-os.environ["LANGSMITH_API"] = "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"
-os.environ["COHERE_API_KEY"] = "JV4zDNnW13pe5kyjOkj4Yf2FX4pAcroV8oQevj7F"
-os.environ["LANGCHAIN_API_KEY"] = "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"
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"] = 'default'
-
-
 from phi.knowledge.langchain import LangChainKnowledgeBase
 from langchain_openai import OpenAIEmbeddings
-from utils import get_prompt, get_vectorstores
+from utils import get_vectorstores
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.agent import Agent, AgentMemory
 from phi.model.openai import OpenAIChat
@@ -125,7 +110,7 @@ class FitFusion:
             instructions=[
                 "You are tasked with creating a **step-by-step plan** to develop a **7-day diet and workout routine** using the retrieved data from the knowledge base and the user's provided information. ",
                 "Use the user’s personal details (age, gender, height, weight, goals, dietary preferences, workout preferences, etc.) to ensure the plan is well-tailored. ",
-                "Your plan should include daily meals (breakfast, lunch, dinner, snacks) and a corresponding workout schedule for each day, accounting for rest days as necessary. ",
+                "Your plan should include daily meals (breakfast, lunch, dinner, snacks) and a corresponding workout schedule for each day with specifying exercise details and plan, accounting for rest days as necessary. ",
                 "In each step, reference the relevant knowledge or insights from the knowledge base—do not assume information that isn’t verified or retrieved. ",
                 "Ensure your final step provides a **complete 7-day plan**, incorporating meal details, macro guidelines, workout details, and any additional health/wellness considerations. ",
                 "Do not add superfluous steps—only steps that contribute to creating and presenting the plan. ",
@@ -158,7 +143,7 @@ class FitFusion:
                 "Next, if additional information is needed, request the web searcher to gather supplementary data from external sources. Provide those links to the article reader as well, ensuring thorough research.",
                 "Finally, synthesize all the gathered information into a clear, step-by-step 7-day diet and workout plan tailored to the user's details and goals."
             ],
-        show_tool_calls=True,
+            show_tool_calls=True,
             markdown=True,
             read_chat_history=True,
             memory=AgentMemory(
@@ -218,9 +203,6 @@ dummy_user_info = f"""
         Stress Levels: low
         Hydration Habits: ~3L water/day
 
-        ### Metrics and Tracking
-        Current Weight: 78 kg
-
         ### Behavioral Insights
         Motivators: General Health, Appearance
         Barriers: Time constraints (office job)
@@ -238,7 +220,7 @@ dummy_user_info = f"""
 # 1. Instantiate the FitFusion class
 _fit_fusion_instance = FitFusion(
     llm_model="gpt-4o-mini",
-    data_path="./diet",
+    data_path="./diet_data",
     data_types=["txt"],
     vectorstore_name="weaviate",
     embeddings_model="openai"
@@ -248,10 +230,12 @@ _fit_fusion_instance = FitFusion(
 agent = _fit_fusion_instance.agent_init()
 
 # 3. Generate the Playground FastAPI `app`
-app = Playground(agents=agent).get_app()
+app = Playground(agents=[agent]).get_app()
 
 def main():
+    # For launching Streamlit interface
     # serve_playground_app("fit_fusion:app", reload=True)
+    # For running in terminal
     _fit_fusion_instance.query_inferences(dummy_user_info)
 
 if __name__ == "__main__":
