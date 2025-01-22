@@ -111,7 +111,7 @@ FitFusion is an AI-powered application that generates personalized 7-day diet an
 
 ## **Development and Debugging**
 - Restart the Streamlit session using the "New Chat Session" button if needed.
-- Modify or add knowledge files in the `./diet` directory and restart the app to reload data.
+- Modify or add knowledge files in the `./diet_data` directory and restart the app to reload data.
 
 ---
 
