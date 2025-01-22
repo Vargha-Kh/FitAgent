@@ -1,11 +1,19 @@
 import nest_asyncio
 import streamlit as st
+import json
 from typing import List
+from pathlib import Path
 from fit_fusion import _fit_fusion_instance
+import os
+
+# Optional: set proxy if needed
+os.environ["HTTP_PROXY"] = "socks5://127.0.0.1:8087"
+os.environ["HTTPS_PROXY"] = "socks5://127.0.0.1:8087"
 
 # Allow Streamlit + async calls in a notebook environment
 nest_asyncio.apply()
 
+# Streamlit page settings
 st.set_page_config(
     page_title="FitFusion",
     page_icon=":apple:",
@@ -15,18 +23,24 @@ st.set_page_config(
 st.title("FitFusion")
 st.markdown("##### A diet and workout planning coach")
 
+# --- Load default user data
+def load_default_data() -> dict:
+    """Load the default user data from a JSON file."""
+    default_file = Path(__file__).parent / "default_user_data.json"
+    with open(default_file, "r") as f:
+        return json.load(f)
+
+# --- Utility function to reset chat
 def restart_agent():
-    """
-    Clears the chat history and restarts the session state for the agent.
-    """
-    if "fit_fusion_agent" in st.session_state:
-        del st.session_state["fit_fusion_agent"]
-    if "messages" in st.session_state:
-        del st.session_state["messages"]
-    if "user_data" in st.session_state:
-        del st.session_state["user_data"]
+    """Clears the chat history and restarts the session state for the agent."""
+    for key in ["fit_fusion_agent", "messages", "user_data"]:
+        if key in st.session_state:
+            del st.session_state[key]
+    # We don’t call st.experimental_rerun() on user input,
+    # only when user explicitly clicks "New Chat Session"
     st.experimental_rerun()
 
+# --- Main function
 def main() -> None:
     # Sidebar controls
     st.sidebar.header("Controls")
@@ -41,6 +55,7 @@ def main() -> None:
 
     # 2. Initialize chat messages in session state
     if "messages" not in st.session_state:
+        # Start with a greeting from the assistant
         st.session_state["messages"] = [
             {
                 "role": "assistant",
@@ -51,33 +66,9 @@ def main() -> None:
             }
         ]
 
-    # 3. Initialize or update user_data in session state
+    # 3. Initialize or load user_data from JSON file
     if "user_data" not in st.session_state:
-        st.session_state["user_data"] = {
-            "Age": 25,
-            "Gender": "Male",
-            "Height": "180 cm",
-            "Weight": "70 kg",
-            "Primary Goal": "Muscle Gain",
-            "Target Weight": "78 kg",
-            "Timeframe": "3 months",
-            "Current Physical Activity": "Moderately active (fitness enthusiast)",
-            "Existing Medical Conditions": "None",
-            "Food Allergies": "None",
-            "Diet Type": "Omnivore",
-            "Meal Frequency Preferences": "3 meals + 2 snacks",
-            "Preferred Workout Types": "Cardio, Strength training",
-            "Current Fitness Level": "Beginner",
-            "Workout Frequency": "3 days/week",
-            "Workout Duration": "~45 min",
-            "Sleep Patterns": "~8 hours",
-            "Stress Levels": "low",
-            "Hydration Habits": "~3L water/day",
-            "Motivators": "General Health, Appearance",
-            "Barriers": "Time constraints (office job)",
-            "Adjustability": "Willing to adjust plan each month",
-            "Feedback Loop": "Weekly weigh-ins and monthly measurements",
-        }
+        st.session_state["user_data"] = load_default_data()
 
     # 4. Create a form in the sidebar for user data
     with st.sidebar.form("user_data_form", clear_on_submit=False):
@@ -87,8 +78,9 @@ def main() -> None:
         )
         st.session_state["user_data"]["Gender"] = st.selectbox(
             "Gender", ["Male", "Female", "Other"],
-            index=["Male", "Female", "Other"].index(st.session_state["user_data"]["Gender"])
-            if st.session_state["user_data"]["Gender"] in ["Male", "Female", "Other"] else 0
+            index=["Male", "Female", "Other"].index(
+                st.session_state["user_data"]["Gender"]
+            )
         )
         st.session_state["user_data"]["Height"] = st.text_input(
             "Height", st.session_state["user_data"]["Height"]
@@ -98,77 +90,57 @@ def main() -> None:
         )
 
         st.write("### Goals")
-        st.session_state["user_data"]["Primary Goal"] = st.text_input(
-            "Primary Goal", st.session_state["user_data"]["Primary Goal"]
-        )
-        st.session_state["user_data"]["Target Weight"] = st.text_input(
-            "Target Weight", st.session_state["user_data"]["Target Weight"]
-        )
-        st.session_state["user_data"]["Timeframe"] = st.text_input(
-            "Timeframe", st.session_state["user_data"]["Timeframe"]
-        )
+        for field in ["Primary Goal", "Target Weight", "Timeframe"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Activity Levels")
         st.session_state["user_data"]["Current Physical Activity"] = st.text_input(
-            "Current Physical Activity", st.session_state["user_data"]["Current Physical Activity"]
+            "Current Physical Activity",
+            st.session_state["user_data"]["Current Physical Activity"],
         )
 
         st.write("### Medical and Health Information")
-        st.session_state["user_data"]["Existing Medical Conditions"] = st.text_input(
-            "Existing Medical Conditions", st.session_state["user_data"]["Existing Medical Conditions"]
-        )
-        st.session_state["user_data"]["Food Allergies"] = st.text_input(
-            "Food Allergies", st.session_state["user_data"]["Food Allergies"]
-        )
+        for field in ["Existing Medical Conditions", "Food Allergies"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Dietary Preferences")
-        st.session_state["user_data"]["Diet Type"] = st.text_input(
-            "Diet Type", st.session_state["user_data"]["Diet Type"]
-        )
-        st.session_state["user_data"]["Meal Frequency Preferences"] = st.text_input(
-            "Meal Frequency Preferences", st.session_state["user_data"]["Meal Frequency Preferences"]
-        )
+        for field in ["Diet Type", "Meal Frequency Preferences"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Workout Preferences")
-        st.session_state["user_data"]["Preferred Workout Types"] = st.text_input(
-            "Preferred Workout Types", st.session_state["user_data"]["Preferred Workout Types"]
-        )
-        st.session_state["user_data"]["Current Fitness Level"] = st.text_input(
-            "Current Fitness Level", st.session_state["user_data"]["Current Fitness Level"]
-        )
-        st.session_state["user_data"]["Workout Frequency"] = st.text_input(
-            "Workout Frequency", st.session_state["user_data"]["Workout Frequency"]
-        )
-        st.session_state["user_data"]["Workout Duration"] = st.text_input(
-            "Workout Duration", st.session_state["user_data"]["Workout Duration"]
-        )
+        for field in [
+            "Preferred Workout Types",
+            "Current Fitness Level",
+            "Workout Frequency",
+            "Workout Duration",
+        ]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Lifestyle and Habits")
-        st.session_state["user_data"]["Sleep Patterns"] = st.text_input(
-            "Sleep Patterns", st.session_state["user_data"]["Sleep Patterns"]
-        )
-        st.session_state["user_data"]["Stress Levels"] = st.text_input(
-            "Stress Levels", st.session_state["user_data"]["Stress Levels"]
-        )
-        st.session_state["user_data"]["Hydration Habits"] = st.text_input(
-            "Hydration Habits", st.session_state["user_data"]["Hydration Habits"]
-        )
+        for field in ["Sleep Patterns", "Stress Levels", "Hydration Habits"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Behavioral Insights")
-        st.session_state["user_data"]["Motivators"] = st.text_input(
-            "Motivators", st.session_state["user_data"]["Motivators"]
-        )
-        st.session_state["user_data"]["Barriers"] = st.text_input(
-            "Barriers", st.session_state["user_data"]["Barriers"]
-        )
+        for field in ["Motivators", "Barriers"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         st.write("### Feedback and Customization")
-        st.session_state["user_data"]["Adjustability"] = st.text_input(
-            "Adjustability", st.session_state["user_data"]["Adjustability"]
-        )
-        st.session_state["user_data"]["Feedback Loop"] = st.text_input(
-            "Feedback Loop", st.session_state["user_data"]["Feedback Loop"]
-        )
+        for field in ["Adjustability", "Feedback Loop"]:
+            st.session_state["user_data"][field] = st.text_input(
+                field, st.session_state["user_data"][field]
+            )
 
         submitted = st.form_submit_button("Update Data")
         if submitted:
@@ -176,7 +148,6 @@ def main() -> None:
 
     # 5. Button to generate a full 7-day plan with current user data
     if st.sidebar.button("Generate Diet & Workout Plan"):
-        # Build a prompt from the user data
         data_dict = st.session_state["user_data"]
         user_info_text = f"""
 Generate a comprehensive 7-day diet plan and workout schedule based on the following details:
@@ -221,41 +192,44 @@ Barriers: {data_dict["Barriers"]}
 ### Feedback and Customization
 Adjustability: {data_dict["Adjustability"]}
 Feedback Loop: {data_dict["Feedback Loop"]}
-        """.strip()
+""".strip()
 
-        # 5a. Append user query to the chat history
+        # Treat this like a user message in the conversation
         st.session_state["messages"].append({"role": "user", "content": user_info_text})
+        response = fit_fusion_agent.run(user_info_text)
+        plan_content = response.content
 
-        # 5b. Have the agent generate the plan and extract content
-        plan_response = fit_fusion_agent.run(user_info_text)
-        plan_content = plan_response.content  # Extract content from response object
-
-        # 5c. Append the content as assistant's message
+        # Assistant's response
         st.session_state["messages"].append({"role": "assistant", "content": plan_content})
 
-        # 6. Display current chat messages using markdown
-        for msg in st.session_state["messages"]:
-            with st.chat_message(msg["role"]):
-                st.markdown(msg["content"])  # Changed from st.write() to st.markdown()
+    # --- Always display the existing conversation
+    for msg in st.session_state["messages"]:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
 
-        # 7. Chat input for follow-up questions
-        user_input = st.chat_input(placeholder="Ask more questions or refine your plan...")
-        if user_input:
-            # Display user query
-            st.session_state["messages"].append({"role": "user", "content": user_input})
-            with st.chat_message("user"):
-                st.write(user_input)
+    # --- Chat input for follow-up or new questions (always visible)
+    user_input = st.chat_input(placeholder="Ask more questions or refine your plan...")
+    if user_input:
+        # Append user message
+        st.session_state["messages"].append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.write(user_input)
 
-            # Generate and display agent response
-            with st.chat_message("assistant"):
-                resp_container = st.empty()
-                fit_fusion_agent.print_response(user_input, stream=True)
-                response = fit_fusion_agent.run(user_input)
-                agent_full_response = response.content  # Extract content from response
-                resp_container.markdown(agent_full_response)  # Render as markdown
+        # Get assistant response
+        with st.chat_message("assistant"):
+            resp_container = st.empty()
+            # If you want to stream token-by-token:
+            # fit_fusion_agent.print_response(user_input, stream=True)
+            # Then read the final content:
+            response = fit_fusion_agent.run(user_input)
+            agent_full_response = response.content
+            resp_container.markdown(agent_full_response)
 
-            # Save agent response to chat history
-            st.session_state["messages"].append({"role": "assistant", "content": agent_full_response})
-# Run the app
+        # Finally, append assistant’s response to chat history
+        st.session_state["messages"].append(
+            {"role": "assistant", "content": agent_full_response}
+        )
+
+
 if __name__ == "__main__":
     main()
