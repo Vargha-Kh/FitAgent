@@ -8,6 +8,8 @@ from phi.agent import Agent, AgentMemory
 from phi.model.openai import OpenAIChat
 from phi.memory.db.sqlite import SqliteMemoryDb
 from phi.storage.agent.sqlite import SqlAgentStorage
+from phi.knowledge.text import TextKnowledgeBase
+# from phi.vectordb.weaviate import Weaviate
 from phi.playground import Playground, serve_playground_app
 
 
@@ -18,12 +20,13 @@ class FitFusion:
     """
 
     def __init__(
-        self,
-        llm_model: str,
-        data_path: str,
-        data_types=None,
-        vectorstore_name: str = "weaviate",
-        embeddings_model: str = "openai",
+            self,
+            llm_model: str,
+            data_path: str,
+            data_types=None,
+            vectorstore_name: str = "weaviate",
+            embeddings_model: str = "openai",
+            create_db: bool = True
     ):
         """
         Initialize FitFusion with model and database settings.
@@ -45,7 +48,7 @@ class FitFusion:
 
         self.database_collection_name = "RAG"
         self.chunk_size = 5000
-        self.create_db = True
+        self.create_db = create_db
         self.db_file = "./data.db"
 
         # Additional placeholders
@@ -93,6 +96,21 @@ class FitFusion:
         )
         return knowledge_base
 
+    # # Integrated weaviate vectordb
+    # def create_knowledge_base(self):
+    #     """
+    #     Create a knowledge base using the specified vector store and embeddings.
+    #
+    #     Returns:
+    #         LangChainKnowledgeBase: An object with retrieval and storage functionality.
+    #     """
+    #     knowledge_base = TextKnowledgeBase(
+    #         path=self.data_path,
+    #         vector_db=Weaviate(index_name=self.database_collection_name),
+    #     )
+    #
+    #     return knowledge_base
+
     def agent_init(self) -> Agent:
         """
         Initialize and link multiple agents to handle queries.
@@ -101,6 +119,8 @@ class FitFusion:
             Agent: A team-based agent that coordinates sub-agents (diet_agent, web_searcher).
         """
         knowledge_base = self.create_knowledge_base()
+        # Comment out after first run
+        # knowledge_base.load(recreate=True)
 
         # Sub-agent that focuses on building diet & workout plans.
         diet_agent = Agent(
@@ -113,6 +133,7 @@ class FitFusion:
                 "Your plan should include daily meals (breakfast, lunch, dinner, snacks) and a corresponding workout schedule for each day with specifying exercise details and plan, accounting for rest days as necessary. ",
                 "In each step, reference the relevant knowledge or insights from the knowledge base—do not assume information that isn’t verified or retrieved. ",
                 "Ensure your final step provides a **complete 7-day plan**, incorporating meal details, macro guidelines, workout details, and any additional health/wellness considerations. ",
+                "Make sure do not skip any days plan",
                 "Do not add superfluous steps—only steps that contribute to creating and presenting the plan. ",
                 "The result of the **final step** is your final answer."
             ],
@@ -141,7 +162,7 @@ class FitFusion:
                 "First, retrieve any relevant information from the knowledge base that addresses the user's query or domain of interest.",
                 "Then, ask the article reader to review the retrieved documents for detailed insights. Provide direct references or links to the content so it can be examined.",
                 "Next, if additional information is needed, request the web searcher to gather supplementary data from external sources. Provide those links to the article reader as well, ensuring thorough research.",
-                "Finally, synthesize all the gathered information into a clear, step-by-step 7-day diet and workout plan tailored to the user's details and goals."
+                "Finally, synthesize all the gathered information into a clear, step-by-step 7-day diet and workout plan tailored to the user's details and goals and Make sure do not skip any days plan."
             ],
             show_tool_calls=True,
             markdown=True,
@@ -212,9 +233,8 @@ dummy_user_info = f"""
         Feedback Loop: Weekly weigh-ins and monthly measurements
         """
 
-
 # ------------------------------------------------------------------------------
-# Create the global top-level `app` that uvicorn can discover
+# Create main app
 # ------------------------------------------------------------------------------
 
 # 1. Instantiate the FitFusion class
@@ -223,7 +243,8 @@ _fit_fusion_instance = FitFusion(
     data_path="./diet_data",
     data_types=["txt"],
     vectorstore_name="weaviate",
-    embeddings_model="openai"
+    embeddings_model="openai",
+    create_db=True
 )
 
 # 2. Initialize the agent
@@ -232,11 +253,13 @@ agent = _fit_fusion_instance.agent_init()
 # 3. Generate the Playground FastAPI `app`
 app = Playground(agents=[agent]).get_app()
 
+
 def main():
     # For launching Streamlit interface
     # serve_playground_app("fit_fusion:app", reload=True)
     # For running in terminal
     _fit_fusion_instance.query_inferences(dummy_user_info)
+
 
 if __name__ == "__main__":
     main()
