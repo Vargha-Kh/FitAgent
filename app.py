@@ -1,14 +1,8 @@
 import nest_asyncio
 import streamlit as st
 import json
-from typing import List
 from pathlib import Path
 from fit_fusion import _fit_fusion_instance
-import os
-
-# Optional: set proxy if needed
-os.environ["HTTP_PROXY"] = "socks5://127.0.0.1:8087"
-os.environ["HTTPS_PROXY"] = "socks5://127.0.0.1:8087"
 
 # Allow Streamlit + async calls in a notebook environment
 nest_asyncio.apply()
@@ -23,12 +17,14 @@ st.set_page_config(
 st.title("FitFusion")
 st.markdown("##### A diet and workout planning coach")
 
+
 # --- Load default user data
 def load_default_data() -> dict:
     """Load the default user data from a JSON file."""
     default_file = Path(__file__).parent / "default_user_data.json"
     with open(default_file, "r") as f:
         return json.load(f)
+
 
 # --- Utility function to reset chat
 def restart_agent():
@@ -39,6 +35,7 @@ def restart_agent():
     # We don’t call st.experimental_rerun() on user input,
     # only when user explicitly clicks "New Chat Session"
     st.experimental_rerun()
+
 
 # --- Main function
 def main() -> None:
@@ -108,10 +105,32 @@ def main() -> None:
             )
 
         st.write("### Dietary Preferences")
-        for field in ["Diet Type", "Meal Frequency Preferences"]:
-            st.session_state["user_data"][field] = st.text_input(
-                field, st.session_state["user_data"][field]
-            )
+        # -- We specifically replace "Diet Type" with a selectbox:
+        diet_type_options = [
+            "Vegetarian",
+            "Traditional",
+            "Keto",
+            "Mediterranean",
+            "High-protein",
+            "Paleo",
+        ]
+        # Try to find the best matching index if user_data already has a diet type
+        current_diet_type = st.session_state["user_data"].get("Diet Type", "")
+        if current_diet_type in diet_type_options:
+            default_idx = diet_type_options.index(current_diet_type)
+        else:
+            default_idx = 0  # fallback if not found
+
+        st.session_state["user_data"]["Diet Type"] = st.selectbox(
+            "Diet Type",
+            diet_type_options,
+            index=default_idx
+        )
+
+        # - For "Meal Frequency Preferences", keep it text_input
+        st.session_state["user_data"]["Meal Frequency Preferences"] = st.text_input(
+            "Meal Frequency Preferences", st.session_state["user_data"]["Meal Frequency Preferences"]
+        )
 
         st.write("### Workout Preferences")
         for field in [
