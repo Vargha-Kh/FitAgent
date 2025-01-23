@@ -1,797 +1,3583 @@
 {
-  "caseId": 1,
-  "userProfile": {
-    "personalInfo": {
-      "age": 45,
-      "gender": "Female",
-      "height_cm": 165,
-      "currentWeight_kg": 75
-    },
-    "goals": {
-      "primaryGoal": "Weight Loss",
-      "targetWeight_kg": 68,
-      "timeframe_months": 4
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Lightly active (office job)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Pre-hypertension",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 1 snack"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 6.5,
-      "stressLevel": "High",
-      "waterIntake_LitersPerDay": 1.8
-    }
+  "dietTypeDescriptions": {
+    "Vegetarian": "A diet focused on plant-based foods, excluding meat, fish, and poultry. Includes eggs and dairy in some variations (ovo-lacto vegetarian).",
+    "Traditional": "A diet that aligns with culturally specific eating habits, focusing on traditional dishes and ingredients of a particular region or heritage.",
+    "Keto": "A high-fat, low-carbohydrate diet designed to put the body into a state of ketosis, where fat becomes the primary energy source.",
+    "Mediterranean": "A diet inspired by the eating habits of countries bordering the Mediterranean Sea. It emphasizes whole grains, fresh vegetables, fruits, olive oil, and moderate amounts of fish and poultry.",
+    "High-protein": "A diet that prioritizes higher-than-average protein intake to support muscle growth, repair, and weight loss goals.",
+    "Paleo": "A diet based on foods thought to have been eaten by early humans, consisting mainly of lean meats, fish, fruits, vegetables, nuts, and seeds, while avoiding processed foods, grains, and dairy."
   },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2000,
-    "suggestedDailyCalorieTarget": 1500,
-    "macronutrientGoals": {
-      "protein_g": 110,
-      "carbohydrates_g": 150,
-      "fats_g": 50
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 350,
-        "foods": ["Greek yogurt with mixed berries", "Green tea"]
+  "cases":[
+    {
+    "caseId": 1,
+    "userProfile": {
+      "personalInfo": {
+        "age": 45,
+        "gender": "Female",
+        "height_cm": 165,
+        "currentWeight_kg": 75
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 450,
-        "foods": ["Grilled chicken salad with olive oil dressing"]
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 68,
+        "timeframe_months": 4
       },
-      {
-        "meal": "Afternoon Snack",
-        "approxCalories": 150,
-        "foods": ["Apple slices with peanut butter"]
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (office job)"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 550,
-        "foods": ["Salmon, steamed veggies, brown rice"]
+      "medicalAndHealth": {
+        "existingConditions": "Pre-hypertension",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6.5,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 1.8
       }
-    ],
-    "additionalSuggestions": [
-      "Reduce sodium intake to manage blood pressure.",
-      "Incorporate short walks during work breaks to manage stress."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 110,
+        "carbohydrates_g": 150,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": ["Greek yogurt with mixed berries", "Green tea"]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": ["Grilled chicken salad with olive oil dressing"]
+        },
+        {
+          "meal": "Afternoon Snack",
+          "approxCalories": 150,
+          "foods": ["Apple slices with peanut butter"]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": ["Salmon, steamed veggies, brown rice"]
+        }
+      ],
+      "additionalSuggestions": [
+        "Reduce sodium intake to manage blood pressure.",
+        "Incorporate short walks during work breaks to manage stress."
+      ]
+    }
   }
-}
+  {
+    "caseId": 2,
+    "userProfile": {
+      "personalInfo": {
+        "age": 25,
+        "gender": "Male",
+        "height_cm": 180,
+        "currentWeight_kg": 70
+      },
+      "goals": {
+        "primaryGoal": "Muscle Gain",
+        "targetWeight_kg": 78,
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (fitness enthusiast)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2800,
+      "suggestedDailyCalorieTarget": 3200,
+      "macronutrientGoals": {
+        "protein_g": 180,
+        "carbohydrates_g": 400,
+        "fats_g": 90
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Egg omelet with spinach and cheese",
+            "Whole-grain toast",
+            "Orange juice"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": ["Chicken breast, sweet potato, side salad"]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 300,
+          "foods": ["Protein shake with banana and peanut butter"]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 800,
+          "foods": ["Lean ground beef, quinoa, steamed broccoli"]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 300,
+          "foods": ["Cottage cheese, mixed nuts"]
+        }
+      ],
+      "additionalSuggestions": [
+        "Focus on progressive overload in strength training.",
+        "Increase carbohydrate intake on heavy workout days."
+      ]
+    }
+  }
 
-{
-  "caseId": 2,
-  "userProfile": {
-    "personalInfo": {
-      "age": 25,
-      "gender": "Male",
-      "height_cm": 180,
-      "currentWeight_kg": 70
-    },
-    "goals": {
-      "primaryGoal": "Muscle Gain",
-      "targetWeight_kg": 78,
-      "timeframe_months": 3
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Moderately active (fitness enthusiast)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "None",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 2 snacks"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 8,
-      "stressLevel": "Low",
-      "waterIntake_LitersPerDay": 3
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2800,
-    "suggestedDailyCalorieTarget": 3200,
-    "macronutrientGoals": {
-      "protein_g": 180,
-      "carbohydrates_g": 400,
-      "fats_g": 90
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 600,
-        "foods": [
-          "Egg omelet with spinach and cheese",
-          "Whole-grain toast",
-          "Orange juice"
-        ]
+  {
+    "caseId": 3,
+    "userProfile": {
+      "personalInfo": {
+        "age": 60,
+        "gender": "Female",
+        "height_cm": 160,
+        "currentWeight_kg": 62
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 700,
-        "foods": ["Chicken breast, sweet potato, side salad"]
+      "goals": {
+        "primaryGoal": "Weight Maintenance",
+        "timeframe_months": 12
       },
-      {
-        "meal": "Snack 1",
-        "approxCalories": 300,
-        "foods": ["Protein shake with banana and peanut butter"]
+      "activityLevel": {
+        "currentPhysicalActivity": "Light walks and occasional yoga"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 800,
-        "foods": ["Lean ground beef, quinoa, steamed broccoli"]
+      "medicalAndHealth": {
+        "existingConditions": "Mild Hypertension",
+        "foodAllergies": "None"
       },
-      {
-        "meal": "Snack 2",
-        "approxCalories": 300,
-        "foods": ["Cottage cheese, mixed nuts"]
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
       }
-    ],
-    "additionalSuggestions": [
-      "Focus on progressive overload in strength training.",
-      "Increase carbohydrate intake on heavy workout days."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1800,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 80,
+        "carbohydrates_g": 200,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Oatmeal with fresh berries",
+            "Low-fat milk",
+            "Herbal tea"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Tuna sandwich on whole wheat bread",
+            "Side salad with vinaigrette"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled chicken, roasted vegetables",
+            "Brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Limit salty snacks to manage blood pressure.",
+        "Incorporate short relaxation exercises to reduce stress."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 3,
-  "userProfile": {
-    "personalInfo": {
-      "age": 60,
-      "gender": "Female",
-      "height_cm": 160,
-      "currentWeight_kg": 62
-    },
-    "goals": {
-      "primaryGoal": "Weight Maintenance",
-      "timeframe_months": 12
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Light walks and occasional yoga"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Mild Hypertension",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7,
-      "stressLevel": "Moderate",
-      "waterIntake_LitersPerDay": 2
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 1800,
-    "suggestedDailyCalorieTarget": 1800,
-    "macronutrientGoals": {
-      "protein_g": 80,
-      "carbohydrates_g": 200,
-      "fats_g": 60
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 400,
-        "foods": [
-          "Oatmeal with fresh berries",
-          "Low-fat milk",
-          "Herbal tea"
-        ]
+  {
+    "caseId": 4,
+    "userProfile": {
+      "personalInfo": {
+        "age": 35,
+        "gender": "Male",
+        "height_cm": 178,
+        "currentWeight_kg": 82
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 500,
-        "foods": [
-          "Tuna sandwich on whole wheat bread",
-          "Side salad with vinaigrette"
-        ]
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 76,
+        "timeframe_months": 3
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 600,
-        "foods": [
-          "Grilled chicken, roasted vegetables",
-          "Brown rice"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (construction job)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Celiac disease",
+        "foodAllergies": "Gluten"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.5
       }
-    ],
-    "additionalSuggestions": [
-      "Limit salty snacks to manage blood pressure.",
-      "Incorporate short relaxation exercises to reduce stress."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2400,
+      "suggestedDailyCalorieTarget": 1900,
+      "macronutrientGoals": {
+        "protein_g": 130,
+        "carbohydrates_g": 180,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Gluten-free toast with almond butter",
+            "Scrambled eggs",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 150,
+          "foods": [
+            "Fruit smoothie (spinach, banana, almond milk)"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled chicken breast",
+            "Gluten-free quinoa",
+            "Mixed greens"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Gluten-free protein bar"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Salmon",
+            "Roasted sweet potatoes",
+            "Steamed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Check ingredient labels for hidden gluten.",
+        "Ensure adequate fiber intake through fruits and veggies."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 4,
-  "userProfile": {
-    "personalInfo": {
-      "age": 35,
-      "gender": "Male",
-      "height_cm": 178,
-      "currentWeight_kg": 82
-    },
-    "goals": {
-      "primaryGoal": "Weight Loss",
-      "targetWeight_kg": 76,
-      "timeframe_months": 3
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Moderately active (construction job)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Celiac disease",
-      "foodAllergies": "Gluten"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 2 snacks"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7,
-      "stressLevel": "Moderate",
-      "waterIntake_LitersPerDay": 2.5
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2400,
-    "suggestedDailyCalorieTarget": 1900,
-    "macronutrientGoals": {
-      "protein_g": 130,
-      "carbohydrates_g": 180,
-      "fats_g": 60
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 400,
-        "foods": [
-          "Gluten-free toast with almond butter",
-          "Scrambled eggs",
-          "Black coffee"
-        ]
+  {
+    "caseId": 5,
+    "userProfile": {
+      "personalInfo": {
+        "age": 28,
+        "gender": "Female",
+        "height_cm": 170,
+        "currentWeight_kg": 70
       },
-      {
-        "meal": "Snack 1",
-        "approxCalories": 150,
-        "foods": [
-          "Fruit smoothie (spinach, banana, almond milk)"
-        ]
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 65,
+        "timeframe_months": 3
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 500,
-        "foods": [
-          "Grilled chicken breast",
-          "Gluten-free quinoa",
-          "Mixed greens"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active"
       },
-      {
-        "meal": "Snack 2",
-        "approxCalories": 150,
-        "foods": [
-          "Gluten-free protein bar"
-        ]
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 700,
-        "foods": [
-          "Salmon",
-          "Roasted sweet potatoes",
-          "Steamed vegetables"
-        ]
+      "dietPreferences": {
+        "dietType": "Vegan",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7.5,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 2
       }
-    ],
-    "additionalSuggestions": [
-      "Check ingredient labels for hidden gluten.",
-      "Ensure adequate fiber intake through fruits and veggies."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 70,
+        "carbohydrates_g": 200,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Tofu scramble with spinach",
+            "Whole-grain toast",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Lentil soup",
+            "Mixed green salad with vinaigrette"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 150,
+          "foods": [
+            "Hummus with carrot sticks"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Chickpea curry with brown rice",
+            "Steamed broccoli"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Consider a B12 supplement due to vegan diet.",
+        "Increase protein by adding legumes or tofu in each meal if feeling fatigued."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 5,
-  "userProfile": {
-    "personalInfo": {
-      "age": 28,
-      "gender": "Female",
-      "height_cm": 170,
-      "currentWeight_kg": 70
-    },
-    "goals": {
-      "primaryGoal": "Weight Loss",
-      "targetWeight_kg": 65,
-      "timeframe_months": 3
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Lightly active"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "None",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Vegan",
-      "mealFrequency": "3 meals + 1 snack"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7.5,
-      "stressLevel": "Low",
-      "waterIntake_LitersPerDay": 2
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2000,
-    "suggestedDailyCalorieTarget": 1500,
-    "macronutrientGoals": {
-      "protein_g": 70,
-      "carbohydrates_g": 200,
-      "fats_g": 50
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 350,
-        "foods": [
-          "Tofu scramble with spinach",
-          "Whole-grain toast",
-          "Black coffee"
-        ]
+  {
+    "caseId": 6,
+    "userProfile": {
+      "personalInfo": {
+        "age": 50,
+        "gender": "Male",
+        "height_cm": 175,
+        "currentWeight_kg": 85
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 450,
-        "foods": [
-          "Lentil soup",
-          "Mixed green salad with vinaigrette"
-        ]
+      "goals": {
+        "primaryGoal": "Better Blood Sugar Control",
+        "targetWeight_kg": 80,
+        "timeframe_months": 4
       },
-      {
-        "meal": "Snack",
-        "approxCalories": 150,
-        "foods": [
-          "Hummus with carrot sticks"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderate (light jogging 2x/week)"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 550,
-        "foods": [
-          "Chickpea curry with brown rice",
-          "Steamed broccoli"
-        ]
+      "medicalAndHealth": {
+        "existingConditions": "Type 2 Diabetes",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2
       }
-    ],
-    "additionalSuggestions": [
-      "Consider a B12 supplement due to vegan diet.",
-      "Increase protein by adding legumes or tofu in each meal if feeling fatigued."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2200,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 150,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Scrambled eggs with veggies",
+            "Whole-wheat toast",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 100,
+          "foods": [
+            "Small handful of almonds"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Grilled fish",
+            "Quinoa",
+            "Steamed broccoli"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Greek yogurt (low-sugar) with berries"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Chicken breast, cauliflower rice",
+            "Salad with olive oil"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Monitor blood sugar 1-2 hours after meals.",
+        "Avoid sugary beverages and refined carbs."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 6,
-  "userProfile": {
-    "personalInfo": {
-      "age": 50,
-      "gender": "Male",
-      "height_cm": 175,
-      "currentWeight_kg": 85
-    },
-    "goals": {
-      "primaryGoal": "Better Blood Sugar Control",
-      "targetWeight_kg": 80,
-      "timeframe_months": 4
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Moderate (light jogging 2x/week)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Type 2 Diabetes",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 2 snacks"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7,
-      "stressLevel": "High",
-      "waterIntake_LitersPerDay": 2
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2200,
-    "suggestedDailyCalorieTarget": 1800,
-    "macronutrientGoals": {
-      "protein_g": 100,
-      "carbohydrates_g": 150,
-      "fats_g": 60
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 350,
-        "foods": [
-          "Scrambled eggs with veggies",
-          "Whole-wheat toast",
-          "Black coffee"
-        ]
+  {
+    "caseId": 7,
+    "userProfile": {
+      "personalInfo": {
+        "age": 20,
+        "gender": "Male",
+        "height_cm": 182,
+        "currentWeight_kg": 76
       },
-      {
-        "meal": "Snack 1",
-        "approxCalories": 100,
-        "foods": [
-          "Small handful of almonds"
-        ]
+      "goals": {
+        "primaryGoal": "Muscle Maintenance",
+        "timeframe_months": 3
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 450,
-        "foods": [
-          "Grilled fish",
-          "Quinoa",
-          "Steamed broccoli"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "High (college sports team)"
       },
-      {
-        "meal": "Snack 2",
-        "approxCalories": 150,
-        "foods": [
-          "Greek yogurt (low-sugar) with berries"
-        ]
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 550,
-        "foods": [
-          "Chicken breast, cauliflower rice",
-          "Salad with olive oil"
-        ]
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8.5,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3.5
       }
-    ],
-    "additionalSuggestions": [
-      "Monitor blood sugar 1-2 hours after meals.",
-      "Avoid sugary beverages and refined carbs."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2800,
+      "suggestedDailyCalorieTarget": 2800,
+      "macronutrientGoals": {
+        "protein_g": 150,
+        "carbohydrates_g": 350,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Protein pancakes with berries",
+            "Low-fat milk"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 250,
+          "foods": [
+            "Protein bar, banana"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": [
+            "Lean beef burger on whole-wheat bun",
+            "Side salad"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 250,
+          "foods": [
+            "Smoothie (whey protein, spinach, strawberries)"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Grilled chicken, pasta, mixed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Time protein intake around workouts for optimal recovery.",
+        "Stay hydrated and consider electrolyte supplementation."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 7,
-  "userProfile": {
-    "personalInfo": {
-      "age": 20,
-      "gender": "Male",
-      "height_cm": 182,
-      "currentWeight_kg": 76
-    },
-    "goals": {
-      "primaryGoal": "Muscle Maintenance",
-      "timeframe_months": 3
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "High (college sports team)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "None",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 2 snacks"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 8.5,
-      "stressLevel": "Low",
-      "waterIntake_LitersPerDay": 3.5
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2800,
-    "suggestedDailyCalorieTarget": 2800,
-    "macronutrientGoals": {
-      "protein_g": 150,
-      "carbohydrates_g": 350,
-      "fats_g": 80
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 600,
-        "foods": [
-          "Protein pancakes with berries",
-          "Low-fat milk"
-        ]
+  {
+    "caseId": 8,
+    "userProfile": {
+      "personalInfo": {
+        "age": 38,
+        "gender": "Female",
+        "height_cm": 168,
+        "currentWeight_kg": 75
       },
-      {
-        "meal": "Snack 1",
-        "approxCalories": 250,
-        "foods": [
-          "Protein bar, banana"
-        ]
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 68,
+        "timeframe_months": 6
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 700,
-        "foods": [
-          "Lean beef burger on whole-wheat bun",
-          "Side salad"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "Light exercises at home"
       },
-      {
-        "meal": "Snack 2",
-        "approxCalories": 250,
-        "foods": [
-          "Smoothie (whey protein, spinach, strawberries)"
-        ]
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 700,
-        "foods": [
-          "Grilled chicken, pasta, mixed vegetables"
-        ]
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 5.5,
+        "stressLevel": "High (new mother)",
+        "waterIntake_LitersPerDay": 2
       }
-    ],
-    "additionalSuggestions": [
-      "Time protein intake around workouts for optimal recovery.",
-      "Stay hydrated and consider electrolyte supplementation."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2100,
+      "suggestedDailyCalorieTarget": 1600,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 170,
+        "fats_g": 55
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Whole-grain cereal with low-fat milk",
+            "Blueberries"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 100,
+          "foods": [
+            "Carrot sticks with hummus"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Turkey sandwich with lettuce, tomato",
+            "Small side salad"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Low-sugar Greek yogurt"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Stir-fried chicken and vegetables",
+            "Brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate postnatal exercises focusing on core strength.",
+        "Ensure adequate calcium and iron intake if breastfeeding."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 8,
-  "userProfile": {
-    "personalInfo": {
-      "age": 38,
-      "gender": "Female",
-      "height_cm": 168,
-      "currentWeight_kg": 75
-    },
-    "goals": {
-      "primaryGoal": "Weight Loss",
-      "targetWeight_kg": 68,
-      "timeframe_months": 6
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Light exercises at home"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "None",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 2 snacks"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 5.5,
-      "stressLevel": "High (new mother)",
-      "waterIntake_LitersPerDay": 2
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2100,
-    "suggestedDailyCalorieTarget": 1600,
-    "macronutrientGoals": {
-      "protein_g": 100,
-      "carbohydrates_g": 170,
-      "fats_g": 55
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 350,
-        "foods": [
-          "Whole-grain cereal with low-fat milk",
-          "Blueberries"
-        ]
+  {
+    "caseId": 9,
+    "userProfile": {
+      "personalInfo": {
+        "age": 65,
+        "gender": "Male",
+        "height_cm": 175,
+        "currentWeight_kg": 72
       },
-      {
-        "meal": "Snack 1",
-        "approxCalories": 100,
-        "foods": [
-          "Carrot sticks with hummus"
-        ]
+      "goals": {
+        "primaryGoal": "Weight Maintenance",
+        "timeframe_months": 12
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 450,
-        "foods": [
-          "Turkey sandwich with lettuce, tomato",
-          "Small side salad"
-        ]
+      "activityLevel": {
+        "currentPhysicalActivity": "Light (daily walks)"
       },
-      {
-        "meal": "Snack 2",
-        "approxCalories": 150,
-        "foods": [
-          "Low-sugar Greek yogurt"
-        ]
+      "medicalAndHealth": {
+        "existingConditions": "Mild arthritis",
+        "foodAllergies": "None"
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 550,
-        "foods": [
-          "Stir-fried chicken and vegetables",
-          "Brown rice"
-        ]
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 2
       }
-    ],
-    "additionalSuggestions": [
-      "Incorporate postnatal exercises focusing on core strength.",
-      "Ensure adequate calcium and iron intake if breastfeeding."
-    ]
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 2000,
+      "macronutrientGoals": {
+        "protein_g": 80,
+        "carbohydrates_g": 220,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Whole-grain toast with avocado",
+            "Scrambled eggs"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Baked fish, mixed vegetables",
+            "Sweet potato"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Lean meat or tofu stir-fry",
+            "Brown rice",
+            "Side salad"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Gentle stretching or yoga to support joint health.",
+        "Maintain consistent meal times for metabolic stability."
+      ]
+    }
   }
-}
 
-{
-  "caseId": 9,
-  "userProfile": {
-    "personalInfo": {
-      "age": 65,
-      "gender": "Male",
-      "height_cm": 175,
-      "currentWeight_kg": 72
+  {
+    "caseId": 10,
+    "userProfile": {
+      "personalInfo": {
+        "age": 33,
+        "gender": "Female",
+        "height_cm": 162,
+        "currentWeight_kg": 72
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 65,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Light (occasional walks)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Hypothyroidism",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
+      }
     },
-    "goals": {
-      "primaryGoal": "Weight Maintenance",
-      "timeframe_months": 12
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1900,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 160,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Oatmeal with almond milk",
+            "Mixed nuts",
+            "Green tea"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Grilled chicken",
+            "Spinach salad with balsamic dressing",
+            "Brown rice"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 150,
+          "foods": [
+            "Low-sugar fruit smoothie"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Lean turkey chili",
+            "Whole-grain crackers",
+            "Steamed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Optimize iodine intake (e.g., iodized salt), as recommended by a doctor.",
+        "Regular check-ups to adjust thyroid medication and track weight progress."
+      ]
+    }
+  }
+  [
+  {
+    "caseId": 1,
+    "userProfile": {
+      "personalInfo": {
+        "age": 45,
+        "gender": "Female",
+        "height_cm": 165,
+        "currentWeight_kg": 75
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 68,
+        "timeframe_months": 4
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (office job)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Pre-hypertension",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6.5,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 1.8
+      }
     },
-    "activityLevel": {
-      "currentPhysicalActivity": "Light (daily walks)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Mild arthritis",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7,
-      "stressLevel": "Low",
-      "waterIntake_LitersPerDay": 2
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 110,
+        "carbohydrates_g": 150,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": ["Greek yogurt with mixed berries", "Green tea"]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": ["Grilled chicken salad with olive oil dressing"]
+        },
+        {
+          "meal": "Afternoon Snack",
+          "approxCalories": 150,
+          "foods": ["Apple slices with peanut butter"]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": ["Salmon, steamed veggies, brown rice"]
+        }
+      ],
+      "additionalSuggestions": [
+        "Reduce sodium intake to manage blood pressure.",
+        "Incorporate short walks during work breaks to manage stress."
+      ]
     }
   },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 2000,
-    "suggestedDailyCalorieTarget": 2000,
-    "macronutrientGoals": {
-      "protein_g": 80,
-      "carbohydrates_g": 220,
-      "fats_g": 60
+  {
+    "caseId": 2,
+    "userProfile": {
+      "personalInfo": {
+        "age": 25,
+        "gender": "Male",
+        "height_cm": 180,
+        "currentWeight_kg": 70
+      },
+      "goals": {
+        "primaryGoal": "Muscle Gain",
+        "targetWeight_kg": 78,
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (fitness enthusiast)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3
+      }
     },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 400,
-        "foods": [
-          "Whole-grain toast with avocado",
-          "Scrambled eggs"
-        ]
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2800,
+      "suggestedDailyCalorieTarget": 3200,
+      "macronutrientGoals": {
+        "protein_g": 180,
+        "carbohydrates_g": 400,
+        "fats_g": 90
       },
-      {
-        "meal": "Lunch",
-        "approxCalories": 600,
-        "foods": [
-          "Baked fish, mixed vegetables",
-          "Sweet potato"
-        ]
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Egg omelet with spinach and cheese",
+            "Whole-grain toast",
+            "Orange juice"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": ["Chicken breast, sweet potato, side salad"]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 300,
+          "foods": ["Protein shake with banana and peanut butter"]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 800,
+          "foods": ["Lean ground beef, quinoa, steamed broccoli"]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 300,
+          "foods": ["Cottage cheese, mixed nuts"]
+        }
+      ],
+      "additionalSuggestions": [
+        "Focus on progressive overload in strength training.",
+        "Increase carbohydrate intake on heavy workout days."
+      ]
+    }
+  },
+  {
+    "caseId": 3,
+    "userProfile": {
+      "personalInfo": {
+        "age": 60,
+        "gender": "Female",
+        "height_cm": 160,
+        "currentWeight_kg": 62
       },
-      {
-        "meal": "Dinner",
-        "approxCalories": 700,
-        "foods": [
-          "Lean meat or tofu stir-fry",
-          "Brown rice",
-          "Side salad"
+      "goals": {
+        "primaryGoal": "Weight Maintenance",
+        "timeframe_months": 12
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Light walks and occasional yoga"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Mild Hypertension",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1800,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 80,
+        "carbohydrates_g": 200,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Oatmeal with fresh berries",
+            "Low-fat milk",
+            "Herbal tea"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Tuna sandwich on whole wheat bread",
+            "Side salad with vinaigrette"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled chicken, roasted vegetables",
+            "Brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Limit salty snacks to manage blood pressure.",
+        "Incorporate short relaxation exercises to reduce stress."
+      ]
+    }
+  },
+  {
+    "caseId": 4,
+    "userProfile": {
+      "personalInfo": {
+        "age": 35,
+        "gender": "Male",
+        "height_cm": 178,
+        "currentWeight_kg": 82
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 76,
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (construction job)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Celiac disease",
+        "foodAllergies": "Gluten"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2400,
+      "suggestedDailyCalorieTarget": 1900,
+      "macronutrientGoals": {
+        "protein_g": 130,
+        "carbohydrates_g": 180,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Gluten-free toast with almond butter",
+            "Scrambled eggs",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 150,
+          "foods": [
+            "Fruit smoothie (spinach, banana, almond milk)"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled chicken breast",
+            "Gluten-free quinoa",
+            "Mixed greens"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Gluten-free protein bar"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Salmon",
+            "Roasted sweet potatoes",
+            "Steamed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Check ingredient labels for hidden gluten.",
+        "Ensure adequate fiber intake through fruits and veggies."
+      ]
+    }
+  },
+  {
+    "caseId": 5,
+    "userProfile": {
+      "personalInfo": {
+        "age": 28,
+        "gender": "Female",
+        "height_cm": 170,
+        "currentWeight_kg": 70
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 65,
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Vegan",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7.5,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 70,
+        "carbohydrates_g": 200,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Tofu scramble with spinach",
+            "Whole-grain toast",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Lentil soup",
+            "Mixed green salad with vinaigrette"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 150,
+          "foods": [
+            "Hummus with carrot sticks"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Chickpea curry with brown rice",
+            "Steamed broccoli"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Consider a B12 supplement due to vegan diet.",
+        "Increase protein by adding legumes or tofu in each meal if feeling fatigued."
+      ]
+    }
+  },
+  {
+    "caseId": 6,
+    "userProfile": {
+      "personalInfo": {
+        "age": 50,
+        "gender": "Male",
+        "height_cm": 175,
+        "currentWeight_kg": 85
+      },
+      "goals": {
+        "primaryGoal": "Better Blood Sugar Control",
+        "targetWeight_kg": 80,
+        "timeframe_months": 4
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderate (light jogging 2x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Type 2 Diabetes",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2200,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 150,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Scrambled eggs with veggies",
+            "Whole-wheat toast",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 100,
+          "foods": [
+            "Small handful of almonds"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Grilled fish",
+            "Quinoa",
+            "Steamed broccoli"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Greek yogurt (low-sugar) with berries"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Chicken breast, cauliflower rice",
+            "Salad with olive oil"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Monitor blood sugar 1-2 hours after meals.",
+        "Avoid sugary beverages and refined carbs."
+      ]
+    }
+  },
+  {
+    "caseId": 7,
+    "userProfile": {
+      "personalInfo": {
+        "age": 20,
+        "gender": "Male",
+        "height_cm": 182,
+        "currentWeight_kg": 76
+      },
+      "goals": {
+        "primaryGoal": "Muscle Maintenance",
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "High (college sports team)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8.5,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2800,
+      "suggestedDailyCalorieTarget": 2800,
+      "macronutrientGoals": {
+        "protein_g": 150,
+        "carbohydrates_g": 350,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Protein pancakes with berries",
+            "Low-fat milk"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 250,
+          "foods": [
+            "Protein bar, banana"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": [
+            "Lean beef burger on whole-wheat bun",
+            "Side salad"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 250,
+          "foods": [
+            "Smoothie (whey protein, spinach, strawberries)"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Grilled chicken, pasta, mixed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Time protein intake around workouts for optimal recovery.",
+        "Stay hydrated and consider electrolyte supplementation."
+      ]
+    }
+  },
+  {
+    "caseId": 8,
+    "userProfile": {
+      "personalInfo": {
+        "age": 38,
+        "gender": "Female",
+        "height_cm": 168,
+        "currentWeight_kg": 75
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 68,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Light exercises at home"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 5.5,
+        "stressLevel": "High (new mother)",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2100,
+      "suggestedDailyCalorieTarget": 1600,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 170,
+        "fats_g": 55
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Whole-grain cereal with low-fat milk",
+            "Blueberries"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 100,
+          "foods": [
+            "Carrot sticks with hummus"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Turkey sandwich with lettuce, tomato",
+            "Small side salad"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Low-sugar Greek yogurt"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Stir-fried chicken and vegetables",
+            "Brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate postnatal exercises focusing on core strength.",
+        "Ensure adequate calcium and iron intake if breastfeeding."
+      ]
+    }
+  },
+  {
+    "caseId": 9,
+    "userProfile": {
+      "personalInfo": {
+        "age": 65,
+        "gender": "Male",
+        "height_cm": 175,
+        "currentWeight_kg": 72
+      },
+      "goals": {
+        "primaryGoal": "Weight Maintenance",
+        "timeframe_months": 12
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Light (daily walks)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Mild arthritis",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 2000,
+      "macronutrientGoals": {
+        "protein_g": 80,
+        "carbohydrates_g": 220,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Whole-grain toast with avocado",
+            "Scrambled eggs"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Baked fish, mixed vegetables",
+            "Sweet potato"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Lean meat or tofu stir-fry",
+            "Brown rice",
+            "Side salad"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Gentle stretching or yoga to support joint health.",
+        "Maintain consistent meal times for metabolic stability."
+      ]
+    }
+  },
+  {
+    "caseId": 10,
+    "userProfile": {
+      "personalInfo": {
+        "age": 33,
+        "gender": "Female",
+        "height_cm": 162,
+        "currentWeight_kg": 72
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 65,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Light (occasional walks)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Hypothyroidism",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Omnivore",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1900,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 160,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Oatmeal with almond milk",
+            "Mixed nuts",
+            "Green tea"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 450,
+          "foods": [
+            "Grilled chicken",
+            "Spinach salad with balsamic dressing",
+            "Brown rice"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 150,
+          "foods": [
+            "Low-sugar fruit smoothie"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Lean turkey chili",
+            "Whole-grain crackers",
+            "Steamed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Optimize iodine intake (e.g., iodized salt), as recommended by a doctor.",
+        "Regular check-ups to adjust thyroid medication and track weight progress."
+      ]
+    }
+  },
+  {
+    "caseId": 11,
+    "userProfile": {
+      "personalInfo": {
+        "age": 29,
+        "gender": "Female",
+        "height_cm": 160,
+        "currentWeight_kg": 68
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 60,
+        "timeframe_months": 4
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Sedentary (desk job)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Vegetarian",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1800,
+      "suggestedDailyCalorieTarget": 1300,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 150,
+        "fats_g": 40
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 300,
+          "foods": [
+            "Vegetable omelet with spinach and feta",
+            "Whole-grain toast",
+            "Herbal tea"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 150,
+          "foods": [
+            "Greek yogurt with honey and almonds"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 350,
+          "foods": [
+            "Quinoa salad with chickpeas, cucumbers, tomatoes, and olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 100,
+          "foods": [
+            "Carrot and celery sticks with hummus"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 400,
+          "foods": [
+            "Grilled tofu with steamed broccoli and brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate a variety of plant-based proteins to meet protein goals.",
+        "Ensure adequate iron intake through legumes and leafy greens."
+      ]
+    }
+  },
+  {
+    "caseId": 12,
+    "userProfile": {
+      "personalInfo": {
+        "age": 34,
+        "gender": "Male",
+        "height_cm": 175,
+        "currentWeight_kg": 85
+      },
+      "goals": {
+        "primaryGoal": "Ketogenic Diet for Weight Loss",
+        "targetWeight_kg": 75,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (gym 3x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Keto",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2500,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 120,
+        "carbohydrates_g": 50,
+        "fats_g": 140
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 500,
+          "foods": [
+            "Scrambled eggs with avocado and bacon",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled chicken thigh",
+            "Cauliflower rice",
+            "Green salad with olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Cheese slices and nuts"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 500,
+          "foods": [
+            "Salmon fillet",
+            "Asparagus sautéed in butter",
+            "Side of leafy greens"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Monitor electrolyte levels to prevent imbalances.",
+        "Incorporate intermittent fasting if suitable."
+      ]
+    }
+  },
+  {
+    "caseId": 13,
+    "userProfile": {
+      "personalInfo": {
+        "age": 42,
+        "gender": "Female",
+        "height_cm": 162,
+        "currentWeight_kg": 78
+      },
+      "goals": {
+        "primaryGoal": "Mediterranean Diet for Heart Health",
+        "targetWeight_kg": 70,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (yoga twice a week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Mild hyperlipidemia",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Mediterranean",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1900,
+      "suggestedDailyCalorieTarget": 1600,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 180,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Greek yogurt with honey and walnuts",
+            "Fresh fruit",
+            "Green tea"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 150,
+          "foods": [
+            "Olives and feta cheese"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 400,
+          "foods": [
+            "Grilled fish",
+            "Quinoa salad with vegetables",
+            "Drizzle of olive oil"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 700,
+          "foods": [
+            "Roasted chicken with herbs",
+            "Steamed vegetables",
+            "Whole-grain bread"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate a variety of colorful vegetables and fruits.",
+        "Use extra-virgin olive oil as the primary fat source."
+      ]
+    }
+  },
+  {
+    "caseId": 14,
+    "userProfile": {
+      "personalInfo": {
+        "age": 37,
+        "gender": "Male",
+        "height_cm": 180,
+        "currentWeight_kg": 90
+      },
+      "goals": {
+        "primaryGoal": "High-Protein Diet for Muscle Building",
+        "targetWeight_kg": 95,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Highly active (weightlifting 5x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "High-protein",
+        "mealFrequency": "4 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 3000,
+      "suggestedDailyCalorieTarget": 3200,
+      "macronutrientGoals": {
+        "protein_g": 220,
+        "carbohydrates_g": 350,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 700,
+          "foods": [
+            "Egg white omelet with turkey bacon and vegetables",
+            "Oatmeal with protein powder",
+            "Protein shake"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 400,
+          "foods": [
+            "Greek yogurt with granola and berries",
+            "Mixed nuts"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 800,
+          "foods": [
+            "Grilled steak",
+            "Sweet potato",
+            "Steamed broccoli"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 300,
+          "foods": [
+            "Protein bar",
+            "Banana"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 1000,
+          "foods": [
+            "Baked salmon",
+            "Brown rice",
+            "Asparagus",
+            "Quinoa salad"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Distribute protein intake evenly across all meals.",
+        "Include post-workout nutrition to aid muscle recovery."
+      ]
+    }
+  },
+  {
+    "caseId": 15,
+    "userProfile": {
+      "personalInfo": {
+        "age": 50,
+        "gender": "Female",
+        "height_cm": 165,
+        "currentWeight_kg": 80
+      },
+      "goals": {
+        "primaryGoal": "Paleo Diet for Weight Loss",
+        "targetWeight_kg": 72,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (cycling 3x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Type 1 Diabetes",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Paleo",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2200,
+      "suggestedDailyCalorieTarget": 1700,
+      "macronutrientGoals": {
+        "protein_g": 120,
+        "carbohydrates_g": 130,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Scrambled eggs with vegetables",
+            "Fresh fruit",
+            "Herbal tea"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with almond butter"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled chicken breast",
+            "Mixed green salad with olive oil and lemon dressing",
+            "Sweet potato"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 600,
+          "foods": [
+            "Beef stir-fry with assorted vegetables",
+            "Cauliflower rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Avoid processed foods and grains.",
+        "Monitor blood sugar levels regularly."
+      ]
+    }
+  },
+  {
+    "caseId": 16,
+    "userProfile": {
+      "personalInfo": {
+        "age": 31,
+        "gender": "Female",
+        "height_cm": 158,
+        "currentWeight_kg": 65
+      },
+      "goals": {
+        "primaryGoal": "Traditional Balanced Diet for Health Maintenance",
+        "timeframe_months": 12
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (walking daily)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "Peanuts"
+      },
+      "dietPreferences": {
+        "dietType": "Traditional",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1800,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 200,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Whole-grain cereal with milk",
+            "Banana",
+            "Orange juice"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with cheese"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Turkey sandwich on whole wheat bread",
+            "Side salad with vinaigrette",
+            "Yogurt"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled chicken breast",
+            "Mashed potatoes",
+            "Steamed green beans"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Include a variety of food groups in each meal.",
+        "Limit intake of saturated fats and sugars."
+      ]
+    }
+  },
+  {
+    "caseId": 17,
+    "userProfile": {
+      "personalInfo": {
+        "age": 27,
+        "gender": "Male",
+        "height_cm": 170,
+        "currentWeight_kg": 68
+      },
+      "goals": {
+        "primaryGoal": "Weight Loss",
+        "targetWeight_kg": 60,
+        "timeframe_months": 3
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (running 3x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "Shellfish"
+      },
+      "dietPreferences": {
+        "dietType": "Vegetarian",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 80,
+        "carbohydrates_g": 180,
+        "fats_g": 50
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Smoothie with spinach, banana, and protein powder",
+            "Whole-grain toast with avocado"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 150,
+          "foods": [
+            "Greek yogurt with honey"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 400,
+          "foods": [
+            "Vegetable stir-fry with tofu",
+            "Brown rice"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Mixed nuts and dried fruit"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 450,
+          "foods": [
+            "Lentil soup",
+            "Side salad with vinaigrette"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Ensure adequate vitamin B12 intake through fortified foods or supplements.",
+        "Incorporate resistance training to support weight loss."
+      ]
+    }
+  },
+  {
+    "caseId": 18,
+    "userProfile": {
+      "personalInfo": {
+        "age": 40,
+        "gender": "Male",
+        "height_cm": 172,
+        "currentWeight_kg": 80
+      },
+      "goals": {
+        "primaryGoal": "Keto Diet for Improved Energy",
+        "targetWeight_kg": 75,
+        "timeframe_months": 4
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Active (swimming 2x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Insulin Resistance",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Keto",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2500,
+      "suggestedDailyCalorieTarget": 1900,
+      "macronutrientGoals": {
+        "protein_g": 110,
+        "carbohydrates_g": 40,
+        "fats_g": 130
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 500,
+          "foods": [
+            "Bacon and eggs",
+            "Avocado slices",
+            "Bulletproof coffee"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Cheese cubes and olives"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled salmon",
+            "Kale salad with olive oil and nuts",
+            "Cauliflower mash"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 600,
+          "foods": [
+            "Beef stir-fry with bell peppers",
+            "Zucchini noodles"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Maintain electrolyte balance by consuming sodium, potassium, and magnesium.",
+        "Limit processed foods and focus on whole, unprocessed ingredients."
+      ]
+    }
+  },
+  {
+    "caseId": 19,
+    "userProfile": {
+      "personalInfo": {
+        "age": 55,
+        "gender": "Female",
+        "height_cm": 158,
+        "currentWeight_kg": 70
+      },
+      "goals": {
+        "primaryGoal": "Mediterranean Diet for Longevity",
+        "timeframe_months": 12
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (gardening)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Mild hypertension",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Mediterranean",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6.5,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1700,
+      "suggestedDailyCalorieTarget": 1700,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 180,
+        "fats_g": 60
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 350,
+          "foods": [
+            "Whole-grain toast with avocado and tomato",
+            "Boiled egg",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 150,
+          "foods": [
+            "Handful of almonds"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 400,
+          "foods": [
+            "Grilled chicken salad with mixed greens, olives, and feta cheese",
+            "Olive oil and lemon dressing"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 150,
+          "foods": [
+            "Greek yogurt with honey"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 550,
+          "foods": [
+            "Baked cod with herbs",
+            "Quinoa",
+            "Steamed vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate regular physical activity like walking or cycling.",
+        "Focus on whole grains, legumes, and a variety of vegetables."
+      ]
+    }
+  },
+  {
+    "caseId": 20,
+    "userProfile": {
+      "personalInfo": {
+        "age": 23,
+        "gender": "Male",
+        "height_cm": 185,
+        "currentWeight_kg": 78
+      },
+      "goals": {
+        "primaryGoal": "High-Protein Diet for Athletic Performance",
+        "targetWeight_kg": 80,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Very active (competitive athlete)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "High-protein",
+        "mealFrequency": "5 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 3200,
+      "suggestedDailyCalorieTarget": 3500,
+      "macronutrientGoals": {
+        "protein_g": 220,
+        "carbohydrates_g": 400,
+        "fats_g": 100
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 700,
+          "foods": [
+            "Omelet with egg whites, spinach, and turkey",
+            "Whole-grain pancakes with maple syrup",
+            "Protein shake"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 400,
+          "foods": [
+            "Greek yogurt with granola and berries",
+            "Protein bar"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 800,
+          "foods": [
+            "Grilled chicken breast",
+            "Brown rice",
+            "Steamed vegetables"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 400,
+          "foods": [
+            "Cottage cheese with pineapple",
+            "Mixed nuts"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 800,
+          "foods": [
+            "Lean beef steak",
+            "Quinoa",
+            "Roasted vegetables"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Consume protein-rich foods immediately after workouts for muscle recovery.",
+        "Stay hydrated and consider electrolyte supplements during intense training."
+      ]
+    }
+  },
+  {
+    "caseId": 21,
+    "userProfile": {
+      "personalInfo": {
+        "age": 48,
+        "gender": "Female",
+        "height_cm": 165,
+        "currentWeight_kg": 82
+      },
+      "goals": {
+        "primaryGoal": "Paleo Diet for Improved Digestion",
+        "targetWeight_kg": 75,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (hiking 2x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "IBS (Irritable Bowel Syndrome)",
+        "foodAllergies": "Gluten"
+      },
+      "dietPreferences": {
+        "dietType": "Paleo",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2100,
+      "suggestedDailyCalorieTarget": 1600,
+      "macronutrientGoals": {
+        "protein_g": 130,
+        "carbohydrates_g": 120,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Smoothie with banana, almond milk, and spinach",
+            "Boiled eggs"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with almond butter"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled turkey breast",
+            "Mixed greens salad with olive oil dressing",
+            "Sweet potato fries"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 500,
+          "foods": [
+            "Baked salmon",
+            "Roasted vegetables",
+            "Cauliflower rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Avoid processed foods and focus on whole, unprocessed ingredients.",
+        "Incorporate probiotics to support gut health."
+      ]
+    }
+  },
+  {
+    "caseId": 22,
+    "userProfile": {
+      "personalInfo": {
+        "age": 36,
+        "gender": "Male",
+        "height_cm": 178,
+        "currentWeight_kg": 85
+      },
+      "goals": {
+        "primaryGoal": "Traditional Balanced Diet for Overall Health",
+        "targetWeight_kg": 80,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (office job with regular gym visits)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "High cholesterol",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Traditional",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2500,
+      "suggestedDailyCalorieTarget": 2000,
+      "macronutrientGoals": {
+        "protein_g": 110,
+        "carbohydrates_g": 250,
+        "fats_g": 70
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 500,
+          "foods": [
+            "Oatmeal with berries and honey",
+            "Scrambled eggs",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with peanut butter"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": [
+            "Grilled chicken sandwich on whole-grain bread",
+            "Side salad with vinaigrette",
+            "Greek yogurt"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 800,
+          "foods": [
+            "Baked salmon",
+            "Brown rice",
+            "Steamed broccoli"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Incorporate more fiber-rich foods to manage cholesterol levels.",
+        "Limit intake of saturated fats and increase intake of omega-3 fatty acids."
+      ]
+    }
+  },
+  {
+    "caseId": 23,
+    "userProfile": {
+      "personalInfo": {
+        "age": 30,
+        "gender": "Female",
+        "height_cm": 165,
+        "currentWeight_kg": 68
+      },
+      "goals": {
+        "primaryGoal": "Keto Diet for Enhanced Mental Clarity",
+        "targetWeight_kg": 63,
+        "timeframe_months": 4
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (yoga and walking)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Migraines",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Keto",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 1800,
+      "suggestedDailyCalorieTarget": 1400,
+      "macronutrientGoals": {
+        "protein_g": 90,
+        "carbohydrates_g": 30,
+        "fats_g": 100
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Avocado and bacon omelet",
+            "Black coffee with coconut oil"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Cheese slices and olives"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 400,
+          "foods": [
+            "Grilled chicken Caesar salad (no croutons)",
+            "Olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 400,
+          "foods": [
+            "Pan-seared salmon",
+            "Asparagus sautéed in butter",
+            "Side of leafy greens"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Maintain hydration to prevent keto flu symptoms.",
+        "Incorporate magnesium-rich foods to alleviate migraines."
+      ]
+    }
+  },
+  {
+    "caseId": 24,
+    "userProfile": {
+      "personalInfo": {
+        "age": 44,
+        "gender": "Male",
+        "height_cm": 180,
+        "currentWeight_kg": 90
+      },
+      "goals": {
+        "primaryGoal": "High-Protein Diet for Recovery",
+        "targetWeight_kg": 85,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Active (physical labor job)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "Dairy"
+      },
+      "dietPreferences": {
+        "dietType": "High-protein",
+        "mealFrequency": "4 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2700,
+      "suggestedDailyCalorieTarget": 2200,
+      "macronutrientGoals": {
+        "protein_g": 150,
+        "carbohydrates_g": 250,
+        "fats_g": 70
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 500,
+          "foods": [
+            "Egg white scramble with turkey sausage and vegetables",
+            "Oatmeal with protein powder"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 300,
+          "foods": [
+            "Protein shake with almond milk and banana"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 600,
+          "foods": [
+            "Grilled chicken breast",
+            "Brown rice",
+            "Steamed broccoli"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 300,
+          "foods": [
+            "Hummus with carrot and celery sticks"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 500,
+          "foods": [
+            "Lean beef stir-fry with mixed vegetables",
+            "Quinoa"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Ensure sufficient protein intake to support muscle repair.",
+        "Avoid dairy-based products and seek alternative protein sources."
+      ]
+    }
+  },
+  {
+    "caseId": 25,
+    "userProfile": {
+      "personalInfo": {
+        "age": 39,
+        "gender": "Female",
+        "height_cm": 170,
+        "currentWeight_kg": 76
+      },
+      "goals": {
+        "primaryGoal": "Paleo Diet for Weight Management",
+        "targetWeight_kg": 70,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Moderately active (Pilates and running)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "Soy"
+      },
+      "dietPreferences": {
+        "dietType": "Paleo",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2000,
+      "suggestedDailyCalorieTarget": 1500,
+      "macronutrientGoals": {
+        "protein_g": 130,
+        "carbohydrates_g": 100,
+        "fats_g": 70
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Smoothie with almond milk, berries, and spinach",
+            "Boiled eggs"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with almond butter"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled shrimp salad with mixed greens and olive oil dressing",
+            "Sweet potato"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 400,
+          "foods": [
+            "Baked chicken thighs",
+            "Roasted Brussels sprouts",
+            "Cauliflower rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Avoid grains, legumes, and processed sugars.",
+        "Incorporate plenty of vegetables and lean proteins."
+      ]
+    }
+  },
+  {
+    "caseId": 26,
+    "userProfile": {
+      "personalInfo": {
+        "age": 52,
+        "gender": "Male",
+        "height_cm": 172,
+        "currentWeight_kg": 88
+      },
+      "goals": {
+        "primaryGoal": "Mediterranean Diet for Diabetes Management",
+        "targetWeight_kg": 80,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (walking daily)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Type 2 Diabetes",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Mediterranean",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6.5,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2200,
+      "suggestedDailyCalorieTarget": 1800,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 180,
+        "fats_g": 70
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Greek yogurt with chia seeds and berries",
+            "Whole-grain toast"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 200,
+          "foods": [
+            "Handful of walnuts and an apple"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled salmon",
+            "Quinoa salad with vegetables",
+            "Olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 200,
+          "foods": [
+            "Hummus with carrot and cucumber sticks"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 500,
+          "foods": [
+            "Chicken breast with herbs",
+            "Steamed broccoli",
+            "Brown rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Monitor blood sugar levels regularly.",
+        "Incorporate healthy fats like olive oil and nuts to improve insulin sensitivity."
+      ]
+    }
+  },
+  {
+    "caseId": 27,
+    "userProfile": {
+      "personalInfo": {
+        "age": 26,
+        "gender": "Female",
+        "height_cm": 162,
+        "currentWeight_kg": 70
+      },
+      "goals": {
+        "primaryGoal": "High-Protein Diet for Endurance Training",
+        "targetWeight_kg": 75,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Highly active (marathon training)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "High-protein",
+        "mealFrequency": "5 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 8,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 4
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2800,
+      "suggestedDailyCalorieTarget": 3000,
+      "macronutrientGoals": {
+        "protein_g": 200,
+        "carbohydrates_g": 350,
+        "fats_g": 80
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Protein pancakes with berries",
+            "Egg white omelet",
+            "Protein shake"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 400,
+          "foods": [
+            "Greek yogurt with granola and honey",
+            "Mixed nuts"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": [
+            "Grilled chicken breast",
+            "Whole-grain pasta",
+            "Steamed vegetables"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 400,
+          "foods": [
+            "Protein bar",
+            "Banana"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 900,
+          "foods": [
+            "Baked salmon",
+            "Quinoa",
+            "Roasted sweet potatoes",
+            "Side salad"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Consume carbohydrates before and after endurance training sessions.",
+        "Ensure adequate protein intake to support muscle repair and energy."
+      ]
+    }
+  },
+  {
+    "caseId": 28,
+    "userProfile": {
+      "personalInfo": {
+        "age": 38,
+        "gender": "Female",
+        "height_cm": 170,
+        "currentWeight_kg": 76
+      },
+      "goals": {
+        "primaryGoal": "Traditional Diet for Weight Maintenance",
+        "timeframe_months": 12
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Lightly active (office job with weekend hikes)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "Pre-diabetes",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Traditional",
+        "mealFrequency": "3 meals + 1 snack"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Moderate",
+        "waterIntake_LitersPerDay": 2.1
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2200,
+      "suggestedDailyCalorieTarget": 2200,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 250,
+        "fats_g": 70
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 500,
+          "foods": [
+            "Whole-grain cereal with milk",
+            "Banana",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack",
+          "approxCalories": 200,
+          "foods": [
+            "Apple slices with peanut butter"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 700,
+          "foods": [
+            "Turkey and cheese sandwich on whole-grain bread",
+            "Side salad with vinaigrette",
+            "Greek yogurt"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 800,
+          "foods": [
+            "Grilled salmon",
+            "Brown rice",
+            "Steamed broccoli"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Monitor carbohydrate intake to manage blood sugar levels.",
+        "Incorporate regular physical activity to support metabolism."
+      ]
+    }
+  },
+  {
+    "caseId": 29,
+    "userProfile": {
+      "personalInfo": {
+        "age": 32,
+        "gender": "Female",
+        "height_cm": 168,
+        "currentWeight_kg": 74
+      },
+      "goals": {
+        "primaryGoal": "Keto Diet for Fat Loss",
+        "targetWeight_kg": 66,
+        "timeframe_months": 5
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Active (gym 4x/week)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Keto",
+        "mealFrequency": "3 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 6,
+        "stressLevel": "High",
+        "waterIntake_LitersPerDay": 2.5
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2100,
+      "suggestedDailyCalorieTarget": 1600,
+      "macronutrientGoals": {
+        "protein_g": 100,
+        "carbohydrates_g": 30,
+        "fats_g": 110
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 400,
+          "foods": [
+            "Scrambled eggs with spinach and feta",
+            "Avocado slices",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 200,
+          "foods": [
+            "Celery sticks with cream cheese"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 500,
+          "foods": [
+            "Grilled chicken Caesar salad (no croutons)",
+            "Olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 200,
+          "foods": [
+            "Cheese cubes and olives"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 300,
+          "foods": [
+            "Pan-seared steak",
+            "Steamed asparagus"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Maintain ketosis by strictly limiting carbohydrate intake.",
+        "Include MCT oil to boost energy levels."
+      ]
+    }
+  },
+  {
+    "caseId": 30,
+    "userProfile": {
+      "personalInfo": {
+        "age": 29,
+        "gender": "Male",
+        "height_cm": 182,
+        "currentWeight_kg": 78
+      },
+      "goals": {
+        "primaryGoal": "Paleo Diet for Improved Athletic Performance",
+        "targetWeight_kg": 80,
+        "timeframe_months": 6
+      },
+      "activityLevel": {
+        "currentPhysicalActivity": "Highly active (crossfit and running)"
+      },
+      "medicalAndHealth": {
+        "existingConditions": "None",
+        "foodAllergies": "None"
+      },
+      "dietPreferences": {
+        "dietType": "Paleo",
+        "mealFrequency": "4 meals + 2 snacks"
+      },
+      "lifestyleHabits": {
+        "sleepHours_perNight": 7,
+        "stressLevel": "Low",
+        "waterIntake_LitersPerDay": 3
+      }
+    },
+    "dietPlanData": {
+      "estimatedDailyCalorieNeeds": 2900,
+      "suggestedDailyCalorieTarget": 3100,
+      "macronutrientGoals": {
+        "protein_g": 180,
+        "carbohydrates_g": 250,
+        "fats_g": 100
+      },
+      "sampleDailyMealPlan": [
+        {
+          "meal": "Breakfast",
+          "approxCalories": 600,
+          "foods": [
+            "Egg scramble with vegetables and bacon",
+            "Fresh fruit",
+            "Black coffee"
+          ]
+        },
+        {
+          "meal": "Snack 1",
+          "approxCalories": 300,
+          "foods": [
+            "Trail mix with nuts and dried fruits"
+          ]
+        },
+        {
+          "meal": "Lunch",
+          "approxCalories": 800,
+          "foods": [
+            "Grilled beef steak",
+            "Sweet potato fries",
+            "Mixed green salad with olive oil dressing"
+          ]
+        },
+        {
+          "meal": "Snack 2",
+          "approxCalories": 300,
+          "foods": [
+            "Protein shake with almond milk and banana"
+          ]
+        },
+        {
+          "meal": "Dinner",
+          "approxCalories": 900,
+          "foods": [
+            "Baked chicken thighs",
+            "Roasted vegetables",
+            "Cauliflower rice"
+          ]
+        }
+      ],
+      "additionalSuggestions": [
+        "Prioritize lean protein sources to support muscle growth.",
+        "Ensure adequate carbohydrate intake to fuel high-intensity workouts."
+      ]
+    }
+  }
+  {
+      "caseId": 31,
+      "userProfile": {
+        "personalInfo": {
+          "age": 29,
+          "gender": "Female",
+          "height_cm": 160,
+          "currentWeight_kg": 62
+        },
+        "goals": {
+          "primaryGoal": "Weight Loss",
+          "targetWeight_kg": 55,
+          "timeframe_months": 4
+        },
+        "activityLevel": {
+          "currentPhysicalActivity": "Moderate (regular yoga and walking)"
+        },
+        "medicalAndHealth": {
+          "existingConditions": "None",
+          "foodAllergies": "None"
+        },
+        "dietPreferences": {
+          "dietType": "Vegetarian",
+          "mealFrequency": "3 meals + 1 snack"
+        },
+        "lifestyleHabits": {
+          "sleepHours_perNight": 7,
+          "stressLevel": "Moderate",
+          "waterIntake_LitersPerDay": 2.2
+        }
+      },
+      "dietPlanData": {
+        "estimatedDailyCalorieNeeds": 1900,
+        "suggestedDailyCalorieTarget": 1400,
+        "macronutrientGoals": {
+          "protein_g": 60,
+          "carbohydrates_g": 180,
+          "fats_g": 40
+        },
+        "sampleDailyMealPlan": [
+          {
+            "meal": "Breakfast",
+            "approxCalories": 350,
+            "foods": [
+              "Spinach and mushroom omelet with feta (egg-free alternative available)",
+              "Whole-grain toast",
+              "Herbal tea"
+            ]
+          },
+          {
+            "meal": "Lunch",
+            "approxCalories": 400,
+            "foods": [
+              "Quinoa salad with chickpeas, cucumbers, and tahini dressing",
+              "Orange slices"
+            ]
+          },
+          {
+            "meal": "Snack",
+            "approxCalories": 150,
+            "foods": [
+              "Hummus with carrot and cucumber sticks"
+            ]
+          },
+          {
+            "meal": "Dinner",
+            "approxCalories": 500,
+            "foods": [
+              "Vegetarian lasagna with zucchini and lentils",
+              "Side green salad"
+            ]
+          }
+        ],
+        "additionalSuggestions": [
+          "Incorporate a variety of protein-rich plant-based foods like beans, lentils, and tofu.",
+          "Consider fortified plant-based milk for calcium and vitamin B12."
         ]
       }
-    ],
-    "additionalSuggestions": [
-      "Gentle stretching or yoga to support joint health.",
-      "Maintain consistent meal times for metabolic stability."
-    ]
-  }
-}
+    },
+    {
+      "caseId": 32,
+      "userProfile": {
+        "personalInfo": {
+          "age": 40,
+          "gender": "Male",
+          "height_cm": 172,
+          "currentWeight_kg": 85
+        },
+        "goals": {
+          "primaryGoal": "Weight Loss",
+          "targetWeight_kg": 78,
+          "timeframe_months": 5
+        },
+        "activityLevel": {
+          "currentPhysicalActivity": "Lightly active (office job)"
+        },
+        "medicalAndHealth": {
+          "existingConditions": "Pre-diabetes",
+          "foodAllergies": "None"
+        },
+        "dietPreferences": {
+          "dietType": "Traditional",
+          "mealFrequency": "3 meals"
+        },
+        "lifestyleHabits": {
+          "sleepHours_perNight": 6,
+          "stressLevel": "High",
+          "waterIntake_LitersPerDay": 1.5
+        }
+      },
+      "dietPlanData": {
+        "estimatedDailyCalorieNeeds": 2200,
+        "suggestedDailyCalorieTarget": 1700,
+        "macronutrientGoals": {
+          "protein_g": 100,
+          "carbohydrates_g": 150,
+          "fats_g": 50
+        },
+        "sampleDailyMealPlan": [
+          {
+            "meal": "Breakfast",
+            "approxCalories": 400,
+            "foods": [
+              "Traditional porridge made with whole-grain oats and milk",
+              "Handful of almonds"
+            ]
+          },
+          {
+            "meal": "Lunch",
+            "approxCalories": 600,
+            "foods": [
+              "Grilled chicken skewers",
+              "Steamed rice",
+              "Cucumber and tomato salad"
+            ]
+          },
+          {
+            "meal": "Dinner",
+            "approxCalories": 700,
+            "foods": [
+              "Lentil soup",
+              "Whole-grain bread",
+              "Mixed vegetable side dish"
+            ]
+          }
+        ],
+        "additionalSuggestions": [
+          "Avoid refined carbs; opt for whole grains.",
+          "Incorporate daily walks after meals to stabilize blood sugar."
+        ]
+      }
+    },
+    {
+      "caseId": 33,
+      "userProfile": {
+        "personalInfo": {
+          "age": 35,
+          "gender": "Female",
+          "height_cm": 165,
+          "currentWeight_kg": 60
+        },
+        "goals": {
+          "primaryGoal": "Better Health",
+          "timeframe_months": 6
+        },
+        "activityLevel": {
+          "currentPhysicalActivity": "Light exercises and yoga"
+        },
+        "medicalAndHealth": {
+          "existingConditions": "Mild anemia",
+          "foodAllergies": "None"
+        },
+        "dietPreferences": {
+          "dietType": "Mediterranean",
+          "mealFrequency": "3 meals + 2 snacks"
+        },
+        "lifestyleHabits": {
+          "sleepHours_perNight": 8,
+          "stressLevel": "Low",
+          "waterIntake_LitersPerDay": 2.5
+        }
+      },
+      "dietPlanData": {
+        "estimatedDailyCalorieNeeds": 2000,
+        "suggestedDailyCalorieTarget": 1800,
+        "macronutrientGoals": {
+          "protein_g": 90,
+          "carbohydrates_g": 200,
+          "fats_g": 70
+        },
+        "sampleDailyMealPlan": [
+          {
+            "meal": "Breakfast",
+            "approxCalories": 400,
+            "foods": [
+              "Greek yogurt with honey and walnuts",
+              "Fresh orange slices"
+            ]
+          },
+          {
+            "meal": "Snack 1",
+            "approxCalories": 150,
+            "foods": [
+              "Sliced cucumber with hummus"
+            ]
+          },
+          {
+            "meal": "Lunch",
+            "approxCalories": 500,
+            "foods": [
+              "Grilled fish",
+              "Quinoa with olive oil",
+              "Steamed green beans"
+            ]
+          },
+          {
+            "meal": "Snack 2",
+            "approxCalories": 150,
+            "foods": [
+              "Handful of almonds"
+            ]
+          },
+          {
+            "meal": "Dinner",
+            "approxCalories": 600,
+            "foods": [
+              "Chicken souvlaki",
+              "Mixed green salad",
+              "Brown rice"
+            ]
+          }
+        ],
+        "additionalSuggestions": [
+          "Incorporate olive oil as a healthy fat source.",
+          "Consume a variety of colorful vegetables for nutrients."
+        ]
+      }
+    },
+    {
+      "caseId": 34,
+      "userProfile": {
+        "personalInfo": {
+          "age": 45,
+          "gender": "Male",
+          "height_cm": 180,
+          "currentWeight_kg": 95
+        },
+        "goals": {
+          "primaryGoal": "Weight Loss",
+          "targetWeight_kg": 85,
+          "timeframe_months": 6
+        },
+        "activityLevel": {
+          "currentPhysicalActivity": "Moderately active"
+        },
+        "medicalAndHealth": {
+          "existingConditions": "High cholesterol",
+          "foodAllergies": "None"
+        },
+        "dietPreferences": {
+          "dietType": "Keto",
+          "mealFrequency": "3 meals"
+        },
+        "lifestyleHabits": {
+          "sleepHours_perNight": 7,
+          "stressLevel": "Moderate",
+          "waterIntake_LitersPerDay": 3
+        }
+      },
+      "dietPlanData": {
+        "estimatedDailyCalorieNeeds": 2500,
+        "suggestedDailyCalorieTarget": 2000,
+        "macronutrientGoals": {
+          "protein_g": 120,
+          "carbohydrates_g": 50,
+          "fats_g": 160
+        },
+        "sampleDailyMealPlan": [
+          {
+            "meal": "Breakfast",
+            "approxCalories": 600,
+            "foods": [
+              "Scrambled eggs with cheese and avocado",
+              "Bacon",
+              "Black coffee"
+            ]
+          },
+          {
+            "meal": "Lunch",
+            "approxCalories": 800,
+            "foods": [
+              "Grilled chicken thigh",
+              "Steamed broccoli with butter",
+              "Cauliflower rice"
+            ]
+          },
+          {
+            "meal": "Dinner",
+            "approxCalories": 600,
+            "foods": [
+              "Baked salmon with a side of spinach salad",
+              "Olive oil and lemon dressing"
+            ]
+          }
+        ],
+        "additionalSuggestions": [
+          "Monitor ketone levels regularly.",
+          "Ensure sufficient electrolytes (e.g., sodium, potassium, magnesium)."
+        ]
+      }
+    }
 
-{
-  "caseId": 10,
-  "userProfile": {
-    "personalInfo": {
-      "age": 33,
-      "gender": "Female",
-      "height_cm": 162,
-      "currentWeight_kg": 72
-    },
-    "goals": {
-      "primaryGoal": "Weight Loss",
-      "targetWeight_kg": 65,
-      "timeframe_months": 5
-    },
-    "activityLevel": {
-      "currentPhysicalActivity": "Light (occasional walks)"
-    },
-    "medicalAndHealth": {
-      "existingConditions": "Hypothyroidism",
-      "foodAllergies": "None"
-    },
-    "dietPreferences": {
-      "dietType": "Omnivore",
-      "mealFrequency": "3 meals + 1 snack"
-    },
-    "lifestyleHabits": {
-      "sleepHours_perNight": 7,
-      "stressLevel": "Moderate",
-      "waterIntake_LitersPerDay": 2
-    }
-  },
-  "dietPlanData": {
-    "estimatedDailyCalorieNeeds": 1900,
-    "suggestedDailyCalorieTarget": 1500,
-    "macronutrientGoals": {
-      "protein_g": 90,
-      "carbohydrates_g": 160,
-      "fats_g": 50
-    },
-    "sampleDailyMealPlan": [
-      {
-        "meal": "Breakfast",
-        "approxCalories": 350,
-        "foods": [
-          "Oatmeal with almond milk",
-          "Mixed nuts",
-          "Green tea"
-        ]
-      },
-      {
-        "meal": "Lunch",
-        "approxCalories": 450,
-        "foods": [
-          "Grilled chicken",
-          "Spinach salad with balsamic dressing",
-          "Brown rice"
-        ]
-      },
-      {
-        "meal": "Snack",
-        "approxCalories": 150,
-        "foods": [
-          "Low-sugar fruit smoothie"
-        ]
-      },
-      {
-        "meal": "Dinner",
-        "approxCalories": 550,
-        "foods": [
-          "Lean turkey chili",
-          "Whole-grain crackers",
-          "Steamed vegetables"
-        ]
-      }
-    ],
-    "additionalSuggestions": [
-      "Optimize iodine intake (e.g., iodized salt), as recommended by a doctor.",
-      "Regular check-ups to adjust thyroid medication and track weight progress."
-    ]
-  }
+  ]
 }
